@@ -5,10 +5,10 @@ ARG TARGETARCH
 ARG TARGETVARIANT
 ARG VERSION
 
-ENV BUILDX_ARCH="${TARGETOS:-linux}_${TARGETARCH:-amd64}${TARGETVARIANT}"
+# ENV BUILDX_ARCH="${TARGETOS:-linux}_${TARGETARCH:-amd64}${TARGETVARIANT}"
 
-RUN wget https://github.com/pocketbase/pocketbase/releases/download/v${VERSION}/pocketbase_${VERSION}_${BUILDX_ARCH}.zip \
-    && unzip pocketbase_${VERSION}_${BUILDX_ARCH}.zip \
+RUN wget https://github.com/pocketbase/pocketbase/releases/download/v0.7.6/pocketbase_0.7.6_linux_arm64.zip \
+    && unzip pocketbase_0.7.6_linux_arm64.zip \
     && chmod +x /pocketbase
 
 FROM alpine:3
