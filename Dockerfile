@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-ARG POCKETBASE_VERSION=0.7.6
+ARG POCKETBASE_VERSION=0.8.0-rc1
 
 # Install the dependencies
 RUN apk add --no-cache \
